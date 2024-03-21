@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quotes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Daily Quote Provider</title>
+</head>
+<body>
+   <div id="header">
+    <p>time</p>
+   </div>
+
+   <div id="main_section">
+    <h2>Quote of the day</h2>
+    <blockquote id="blockquote">
+        loading.... 
+    </blockquote>
+
+    <div id="author">
+    <span>---&nbsp;</span> <!-- for space between span and p using &nbsp -->
+    <p id="authorname">Author name</p>
+    </div>
+
+    <div id="buttons">
+        <button id="copy" class="btn1" onclick="copy()"><i class="fas fa-copy"></i></button>
+        <button id="facebook" class="btn1" onclick="facebook()"><i class="fab fa-facebook"></i></button>
+        <button id="Twitter" class="btn1" onclick="tweet()"><i class="fab fa-twitter"></i></i></button>
+        <button id="next" class="btn" onclick="getquote(api_url);">New Quote</button>
+    </div>
+   </div>
+<script src="quotes.js"></script> 
+</body>
+</html>
