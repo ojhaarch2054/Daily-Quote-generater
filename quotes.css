@@ -21,13 +21,13 @@ body{
 #main_section{
     background-color: aliceblue;
     text-align: center;
-    width: 30%;
-    height: 40%;
-    margin-left: 36%;
-    padding: 20px;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    padding: 5px;
     border: 4px black;
     border-radius: 18px;
-    margin-top: 5%;
+    margin-top: 4%;
 }
 #main_section h2{
     margin-top: -1%;
@@ -134,7 +134,7 @@ body{
         background-color: rgb(162, 162, 124);
     }
 }
-@media screen and (width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         background-size: auto;
         font-family: "Sofia", sans-serif;
@@ -152,7 +152,7 @@ body{
         text-align: center;
     }
     #main_section blockquote{
-        font-size: 2rem;
+        font-size: 1rem;
         font-style: italic;
     }
 
@@ -183,7 +183,7 @@ body{
 
 
 /* Medium screens */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1000px) {
     body{
         background-image: none;
         background-color: aquamarine;
@@ -197,7 +197,7 @@ body{
 }
 
 /* Large screens */
-@media screen and (min-width: 1025px) {
+/*@media screen and (min-width: 1025px) {
     body {
         background-size: auto;
         font-family: "Sofia", sans-serif;
@@ -242,5 +242,5 @@ body{
         cursor: pointer;
         margin-top: 2%;
         
-    }
+    }*/
 
