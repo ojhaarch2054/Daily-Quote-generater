@@ -2,16 +2,27 @@
 var header = document.getElementById("header");
 const blockquote = document.getElementById("blockquote");
 const authorname = document.getElementById("authorname");
-const api_url = "https://api.quotable.io/random" //get the data from api
+const api_url = "https://dummyjson.com/quotes" //get the data from api
 
 //create a async function which helps to get the api data
-async function getquote(url){
-    const response = await fetch(url); //fetch url
-    var data = await response.json();//this data will get all info of api
-    blockquote.innerHTML = " “ "+ data.content + "” ";
-    authorname.innerHTML = data.author;
+async function getquote(url) {
+    try {
+        const response = await fetch(url); //fetch the API
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json(); //parse JSON response
+        const randomQuote = data.quotes[Math.floor(Math.random() * data.quotes.length)]; //pick a random quote
+        blockquote.innerHTML = " “ " + randomQuote.quote + "” "; //update blockquote
+        authorname.innerHTML = randomQuote.author; //update author name
+    } catch (error) {
+        console.error("Error fetching the quote:", error);
+        blockquote.innerHTML = "Sorry, unable to fetch a quote at the moment.";
+        authorname.innerHTML = "";
+    }
 }
-getquote(api_url); //call the function
+//call function to fetch quote
+getquote(api_url);
 
 //create onclick function for twitter 
 function tweet(){
